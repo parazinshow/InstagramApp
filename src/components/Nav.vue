@@ -11,8 +11,7 @@
   const userStore = useUserStore()
   const {user, loadingUser} = storeToRefs(userStore)
 
-//router
-  const router = useRouter()
+
 
 //search 
   const searchUser = ref('')
@@ -24,13 +23,14 @@
   }
 
 //logout
-async function handleLogout (){
-  await userStore.handleLogout()
+  async function handleLogout (){
+    await userStore.handleLogout()
 }
-
-function goToUsersProfile(){
-  router.push(`/profile/${user.value.username}`)
-}
+//router
+  const router = useRouter()
+  function goToUsersProfile(){
+    router.push(`/profile/${user.value.username}`)
+  }
 
 </script>
 

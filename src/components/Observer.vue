@@ -1,20 +1,23 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+//imports
+  import { ref, onMounted } from 'vue';
 
-const observer = ref(null)
-const root = ref(null)
+//observer
+  const observer = ref(null)
+  const root = ref(null)
 
-const emits = defineEmits(['intersect'])
+//emits
+  const emits = defineEmits(['intersect'])
 
-onMounted(()=>{
-  observer.value = new IntersectionObserver(([entry])=>{
-    if(entry && entry.isIntersecting){
-      emits('intersect')
-    }
+//onMounted
+  onMounted(()=>{
+    observer.value = new IntersectionObserver(([entry])=>{
+      if(entry && entry.isIntersecting){
+        emits('intersect')
+      }
+    })
+    observer.value.observe(root.value)
   })
-
-  observer.value.observe(root.value)
-})
 
 </script>
 
