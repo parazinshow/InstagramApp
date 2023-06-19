@@ -11,8 +11,6 @@
   const userStore = useUserStore()
   const {user, loadingUser} = storeToRefs(userStore)
 
-
-
 //search 
   const searchUser = ref('')
   function onSearch(){
