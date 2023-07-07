@@ -57,7 +57,6 @@
       if(data.length){
         reachEnd.value = true
       }
-      console.log(data.length)
     }
   }
 

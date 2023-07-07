@@ -37,7 +37,7 @@
     <Container>
       <div class="nav-container">
         <div class="right-content">
-          <RouterLink to="/"> Intagram</RouterLink>
+          <RouterLink to="/">Intagram</RouterLink>
           <AInputSearch
             v-model:value="searchUser"
             placeholder="username..."
